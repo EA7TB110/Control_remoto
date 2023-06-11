@@ -1,0 +1,61 @@
+Control Remoto.
+
+Que hace:
+Controlar la alrma de ROE.
+Control de la tension en la emisora.
+Control de la tension en la fuente de alimentación.
+Control de la intensidad.
+Control de temperatura:
+Emisora.
+Fuente de alimentación 
+Ambiente.
+
+
+
+Alarmas:
+Alarma de ROE.
+Tensión.
+Intensidad.
+Temperatura.
+Bloqueo del sistema.
+
+
+Avisos:
+Alarma de ROE.
+Tensión.
+Intensidad.
+Temperatura.
+Bloqueo del sistema.
+IP del equipo
+
+Las alarmas y los avisos, se transmitirán al sistema domótico de la estación y a un bot de telegram.
+
+
+Materiales:
+STM32F103  Bluepill.
+Modulo ethernet W5500 mini.
+Sensores de temperatura DS18B20.
+Medidor de intensidad
+
+Funcionamiento:
+Siempre estara midiendo las temperaturas de todos los equipos, y mandara un aviso cada hora.
+Cada 2 horas, comprueba si tiene conexion a internet. En caso de que no tenga conexion.
+  Reseteara el router, con uno de los relees, en caso de que no recupere la conexion. se reseatara el sistema.  
+
+Cuando se de la orden de encendido, se activara un contacto, en ese momento, se controlaran todas las alarmas, ROE, 
+temperatura e intensidad, cuando una de ellas este fuera de los límites establecidos, dará la orden de  desactivación del contacto. 
+
+Esperando 30 minutos para que se pueda volver a dar la orden de conexión.
+En el tiempo de guardia, si se envía una orden de conexión, responder con un aviso de que esta bloqueado por alarma. 
+
+Pasado el tiempo, y recibe la orden de conexión, si se produce de nuevo una alarma, volverá desconectarlo 
+y no se prodra volver a actuar hasta pasados un par de horas. 
+
+En el tercer intento, ya no podrá volver a conectar, hasta que se resetee manualmente.
+
+Durante el funcionamiento normal, cada 15 minutos, enviara los datos del sistema, mediante el boot de telegram.
+Puede recibir comandos desde el bot de telegram, 
+  activar/desactivar el contrato de alimentación, 
+  pedir la ip del sistema, 
+  cambiar el tiempo de envío de los mensaje, 
+  activar/desactivar dos reles 
