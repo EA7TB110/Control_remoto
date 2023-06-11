@@ -1,2 +1,3 @@
 Iremos poniendo la documentacion necesaria de los componetes del proyecto.
-bluepill_pinout.jpg     Pineado de la placa
+Bluepill_pinout.jpg     Pineado de la placa
+Ds18D20.pdf             Datasheet del DS18D20
