@@ -1,2 +1,2 @@
 # Control_remoto
-Contro para una estación remota
+Control para una estación remota
