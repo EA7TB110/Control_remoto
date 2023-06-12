@@ -3,3 +3,4 @@ Bluepill_pinout.jpg               Pineado de la placa
 Ds18D20.pdf                       Datasheet del DS18D20
 W5500_datasheet_v1.0.2_1.pdf      Datasheet del W5500
 WIZ850io.pdf                      Datasheet del WIZ850
+Amphenol_03222023_AHQ-3132209.pdf Datasheet del rele Amphenol_03222023
